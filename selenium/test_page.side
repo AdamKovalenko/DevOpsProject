@@ -1,0 +1,97 @@
+{
+  "id": "69c63e41-b839-4efd-87a5-826f4a71d833",
+  "version": "2.0",
+  "name": "DevOps-Project",
+  "url": "http://4.178.56.71:8081",
+  "tests": [{
+    "id": "1a51589e-14b8-4303-b00a-2b82a9913471",
+    "name": "test_page",
+    "commands": [{
+      "id": "751be56e-9d72-4044-9e2f-a5b4f8b9b031",
+      "comment": "",
+      "command": "open",
+      "target": "/Devops-final-project-/adamliadadiramityuri/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14c58e42-3dda-489f-91aa-79e2ea446934",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'DevOps Project')]", "xpath:innerText"]
+      ],
+      "value": "DevOps Project"
+    }, {
+      "id": "6282e25a-0a16-4692-9afa-ccec599a4f76",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Welcome to our JSP Application')]", "xpath:innerText"]
+      ],
+      "value": "Welcome to our JSP Application"
+    }, {
+      "id": "6fc9c895-1a4e-47ab-bde8-b763a450d363",
+      "comment": "",
+      "command": "click",
+      "target": "name=userText",
+      "targets": [
+        ["name=userText", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='userText']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97dab30a-c964-4ab0-96c7-c63e03bb1af8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var el = document.querySelector('input[name=\"userText\"]'); el.focus(); el.value = 'DevOpsProject'; el.dispatchEvent(new Event('input', { bubbles: true })); el.dispatchEvent(new Event('change', { bubbles: true }));",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "428a406a-4eeb-48da-9d3e-09e483ee4b08",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(2)",
+      "targets": [
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='Submit Data']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce7fef1a-aa22-4d98-bd00-db8257f9244c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.result-box",
+      "targets": [
+        ["css=.result-box", "css:finder"],
+        ["xpath=//div[3]/div", "xpath:position"]
+      ],
+      "value": "You entered: DevOpsProject "
+    }, {
+      "id": "67cd98b6-7365-41bb-981e-c04729f69bcb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=strong",
+      "targets": [],
+      "value": "DevOpsProject"
+    }]
+  }],
+  "suites": [{
+    "id": "0d465101-a3e3-4c5e-9cd5-b5def3074346",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://4.178.56.71:8081/"],
+  "plugins": []
+}
